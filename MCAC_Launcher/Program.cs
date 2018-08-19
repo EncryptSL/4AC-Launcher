@@ -8,6 +8,7 @@ using System.Threading;
 using System.Globalization;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Net;
 
 namespace MCAC_Launcher
 {
@@ -41,6 +42,9 @@ namespace MCAC_Launcher
                 MessageBox.Show(localization.InvalidUsage(), "4lpha Anti Cheat", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
+            // force modern TLS to fix insecure TLS/SSL protocol choice made by older versions of windows
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             // run GUI in dedicated thread
             gui = new LaunchGUI();

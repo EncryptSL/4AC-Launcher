@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaunchGUI));
             this.LabelTitle = new System.Windows.Forms.Label();
             this.LabelStatus = new System.Windows.Forms.Label();
             this.StatusUpdateTimer = new System.Windows.Forms.Timer(this.components);
@@ -71,6 +72,7 @@
             this.Controls.Add(this.LabelTitle);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LaunchGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4lpha Anti Cheat";
